@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>魏明晨的博客</title>
+  <title>python | 魏明晨的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HIT15级,现HIT研一在读">
-<meta property="og:type" content="website">
-<meta property="og:title" content="魏明晨的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Python 笔记基础数据类型 整数 0x表示16进制   浮点数 Ae-10表示A*10^-10次方   字符串 字符串可用&#39; &#39;或&quot; &quot;表示 字符串可转义 r&#39; &#39;可以避免被转义 &#39;&#39;&#39;...&#39;&#39;&#39;可以用来表示多行的字符串   布尔值 与,或,非用and,or,not表示   空值 空值使用No">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python">
+<meta property="og:url" content="http://yoursite.com/2020/03/31/python/index.html">
 <meta property="og:site_name" content="魏明晨的博客">
-<meta property="og:description" content="HIT15级,现HIT研一在读">
+<meta property="og:description" content="Python 笔记基础数据类型 整数 0x表示16进制   浮点数 Ae-10表示A*10^-10次方   字符串 字符串可用&#39; &#39;或&quot; &quot;表示 字符串可转义 r&#39; &#39;可以避免被转义 &#39;&#39;&#39;...&#39;&#39;&#39;可以用来表示多行的字符串   布尔值 与,或,非用and,or,not表示   空值 空值使用No">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-31T10:56:40.168Z">
+<meta property="article:modified_time" content="2020-03-25T15:38:52.489Z">
 <meta property="article:author" content="魏明晨">
 <meta name="twitter:card" content="summary">
   
@@ -156,427 +158,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Algorithm" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-python" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/31/Algorithm/">Algorithm</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/31/Algorithm/" class="archive-article-date">
-  	<time datetime="2020-03-31T11:11:40.047Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="2-23"><a href="#2-23" class="headerlink" title="2.23"></a>2.23</h1><ol>
-<li>堆排序是使用大顶堆对数组进行排序</li>
-<li>大顶堆是指一个节点的两个孩子中的最大值都小于该节点</li>
-<li>数组可以直接用来表示堆，数组索引从1开始，索引为j的节点的父节点是j/2，孩子节点为2j和2j+1</li>
-<li>其中的主要操作为上浮和下沉</li>
-<li>上浮是指将一个节点插入到堆的最下面一层，检查其是否大于其父节点，若大于父节点与父节点交换位置，继续此步骤，直到将该节点交换至正确的位置。</li>
-<li>下沉操作指一个节点将其放至堆的最顶层，检查其是否小于其子节点，若小于其子节点则交换位置，继续此步骤，直到将该节点交换至正确位置。</li>
-<li>堆排序的思想是：将数组看作一个大顶堆，每次取最大的元素，将其与堆最后一个元素交换位置，再对第一个元素执行下沉操作(保证满足堆的条件)，循环操作，直到堆中只有一个元素排序完成。</li>
-<li>所以堆排序首先要建立堆，这里从二分之一数组开始从右向左将元素下沉。即可完成堆的初始化</li>
-<li>堆初始化完成后即可使用前面的方法对数组进行排序</li>
-</ol>
-<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><ol>
-<li>堆只需要用到下沉操作就可以完成排序</li>
-<li>堆排序的时间复杂度为logN</li>
-<li>但堆排序在实际应用中没有快速排序用的广泛，主要原因是它跳跃的访问内存。对于当前体系的计算机会频繁访问硬盘，导致速度并没有快速排序快。</li>
-</ol>
-<h1 id="2-25"><a href="#2-25" class="headerlink" title="2.25"></a>2.25</h1><ol>
-<li>递归注意返回条件</li>
-<li>二叉树删除元素传入要删除的树的根节点， 返回删除元素后的根节点</li>
-<li>二叉树floor和ceiling方法注意找某一键值的floor或ceiling的条件判断，一种是找到了该键值，另一种是寻找键值的向上取整和向下取整</li>
-<li>二叉树的rank方法要注意可以不使用传入额外参数的方法</li>
-<li>所有递归的操作要弄清楚递归何时返回。递归返回后需要做什么。</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/31/Algorithm/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/31/html/">html</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/31/html/" class="archive-article-date">
-  	<time datetime="2020-03-31T11:11:13.290Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="HTML5笔记"><a href="#HTML5笔记" class="headerlink" title="HTML5笔记"></a>HTML5笔记</h1><hr>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><table>
-<thead>
-<tr>
-<th>属性名称</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>唯一的标识页面中的元素</td>
-</tr>
-<tr>
-<td>class</td>
-<td>标识元素的类</td>
-</tr>
-<tr>
-<td>style</td>
-<td>用于指定元素的样式</td>
-</tr>
-<tr>
-<td>title</td>
-<td>当鼠标悬停在上面时显示的内容</td>
-</tr>
-<tr>
-<td>—</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="常用的元素"><a href="#常用的元素" class="headerlink" title="常用的元素"></a>常用的元素</h2><table>
-<thead>
-<tr>
-<th>元素名称</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>h1-h6</td>
-<td>定义标题大小</td>
-</tr>
-<tr>
-<td>p</td>
-<td>定义段落</td>
-</tr>
-<tr>
-<td>br/</td>
-<td>定义换行</td>
-</tr>
-<tr>
-<td>b i</td>
-<td>格式控制，字体的粗细 等</td>
-</tr>
-<tr>
-<td>—</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><table>
-<thead>
-<tr>
-<th>属性</th>
-<th>作用</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>href</td>
-<td>指明资源地址</td>
-<td>可局部</td>
-</tr>
-<tr>
-<td>target</td>
-<td>指明打开链接的方式</td>
-<td></td>
-</tr>
-<tr>
-<td>—</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="HEAD相关元素"><a href="#HEAD相关元素" class="headerlink" title="HEAD相关元素"></a>HEAD相关元素</h2><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>作用</th>
-<th>属性</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>head</td>
-<td>html头</td>
-<td>无</td>
-</tr>
-<tr>
-<td>base</td>
-<td>定义所有链接的基地址</td>
-<td>href target</td>
-</tr>
-<tr>
-<td>meta</td>
-<td>方便搜索引擎</td>
-<td>name content http-equvi</td>
-</tr>
-<tr>
-<td>link</td>
-<td>链接外部样式表和脚本文件</td>
-<td>href type rel</td>
-</tr>
-<tr>
-<td>style</td>
-<td>定义网页内部样式表</td>
-<td>无</td>
-</tr>
-<tr>
-<td>script</td>
-<td>定义网页内脚本</td>
-<td>无</td>
-</tr>
-<tr>
-<td>—</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="图片img"><a href="#图片img" class="headerlink" title="图片img"></a>图片img</h2><table>
-<thead>
-<tr>
-<th>属性</th>
-<th>作用</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>src</td>
-<td>指定资源地址</td>
-<td></td>
-</tr>
-<tr>
-<td>alt</td>
-<td>当图片没有正常加载时显示的文字</td>
-<td></td>
-</tr>
-<tr>
-<td>width</td>
-<td>指定图片的宽度</td>
-<td></td>
-</tr>
-<tr>
-<td>height</td>
-<td>指定图片的高度</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>注意</strong>：图片加载会导致网页加载过慢</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
-<thead>
-<tr>
-<th>元素</th>
-<th>作用</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>table</td>
-<td>标识一个表格</td>
-<td></td>
-</tr>
-<tr>
-<td>tr</td>
-<td>标识表格的一行</td>
-<td></td>
-</tr>
-<tr>
-<td>td</td>
-<td>标识表格一行的一个单元</td>
-<td></td>
-</tr>
-<tr>
-<td>th</td>
-<td>等同于tr特殊在作为表头</td>
-<td></td>
-</tr>
-<tr>
-<td>—</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><table>
-<thead>
-<tr>
-<th>元素</th>
-<th>作用</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ul</td>
-<td>定义一个无序列表</td>
-<td></td>
-</tr>
-<tr>
-<td>ol</td>
-<td>定义一个有序列表</td>
-<td></td>
-</tr>
-<tr>
-<td>li</td>
-<td>列表中的元素</td>
-<td></td>
-</tr>
-<tr>
-<td>dl</td>
-<td>自定义列表</td>
-<td></td>
-</tr>
-<tr>
-<td>dt</td>
-<td>自定义列表的元素</td>
-<td></td>
-</tr>
-<tr>
-<td>dd</td>
-<td>自定义列表的备注</td>
-<td></td>
-</tr>
-<tr>
-<td>—</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><ol>
-<li>元素布局分类<ul>
-<li>块级元素 block<ul>
-<li>h</li>
-<li>p</li>
-<li>ul</li>
-<li>table</li>
-<li>div</li>
-</ul>
-</li>
-<li>内联元素 inline<ul>
-<li>td</li>
-<li>a</li>
-<li>img</li>
-<li>b</li>
-<li>span</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>元素定位<ul>
-<li>规定div的尺寸信息，在div中的所有元素都会受到影响</li>
-<li>可以使用相关的样式属性对div样式进行规定</li>
-<li>可以使用table对页面的样式进行布局</li>
-</ul>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/31/html/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/31/python/">python</a>
+    <h1 class="article-title" itemprop="name">
+      python
     </h1>
   
 
@@ -858,6 +447,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -865,16 +475,79 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/31/python/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/31/python/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/03/31/html/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          html
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -894,8 +567,14 @@
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -918,8 +597,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
